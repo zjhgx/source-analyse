@@ -58,7 +58,7 @@
         </tx:attributes>
     </tx:advice>
     <aop:config proxy-target-class="true">
-        <aop:pointcut id="txServiceFosc" expression="execution (* com.upg..*Service*.*(..))
+        <aop:pointcut id="txServiceFosc" expression="execution (* com..*Service*.*(..))
 			and !execution (* com.upg..action.*.*(..))" />
         <aop:advisor pointcut-ref="txServiceFosc" advice-ref="txAdvice" />
 <!--         <aop:advisor pointcut-ref="txServiceFosc" advice-ref="xcarsExceptionInterceptor" />
